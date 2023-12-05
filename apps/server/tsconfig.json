@@ -14,14 +14,12 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
+        "composite": true,
         "baseUrl": ".",
         "paths": {
-            "ui/*": ["./src/*"],
-            "react": ["./node_modules/@types/react"]
-        },
-        "typeRoots": ["@types"]
+            "server*": ["./src/*"],
+            "api/*": ["../../packages/api/src/*", "./*"]
+        }
     },
-    "include": ["."],
-    "exclude": ["node_modules", "dist"]
+    "include": ["vite.config.ts"]
 }

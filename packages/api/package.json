@@ -1,0 +1,29 @@
+{
+    "name": "api",
+    "version": "0.1.0",
+    "main": "./dist/index.js",
+    "types": "./dist/index.js",
+    "sideEffects": false,
+    "scripts": {
+        "dev": "tsup ./index.ts --watch",
+        "build": "tsup ./index.ts",
+        "app:build": "tsup ./index.ts"
+    },
+    "dependencies": {
+        "@trpc/server": "^10.44.1",
+        "apache-arrow": "^14.0.1",
+        "arrow-js-ffi": "^0.3.0",
+        "date-fns-tz": "^2.0.0",
+        "eslint-config-custom": "workspace:*",
+        "nodemailer": "^6.9.7",
+        "parquet-wasm": "0.6.0-beta.1",
+        "tsconfig": "workspace:*",
+        "typescript": "^5.3.2",
+        "vite": "^5.0.4",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@types/nodemailer": "^6.4.14",
+        "tsup": "^8.0.1"
+    }
+}

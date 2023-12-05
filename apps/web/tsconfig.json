@@ -1,18 +1,30 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
-  "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "next.config.js",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "web/*": ["./src/*"],
+            "ui/*": ["../../packages/ui/src/*"],
+            "api/*": ["../../packages/api/src/*"],
+            "react": ["./node_modules/@types/react"]
+        },
+        "typeRoots": ["@types"],
+        "types": ["@svgx/vite-plugin-react"]
+    },
+    "include": ["."],
+    "exclude": ["node_modules", "dist"]
 }

@@ -1,28 +1,51 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --max-warnings 0"
-  },
-  "dependencies": {
-    "@repo/ui": "workspace:*",
-    "next": "^14.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.2",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@types/eslint": "^8.44.7",
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "eslint": "^8.53.0",
-    "typescript": "^5.2.2"
-  }
+    "name": "web",
+    "version": "1.0.1",
+    "main": "./src/App.tsx",
+    "scripts": {
+        "dev": "vite --mode standalone",
+        "build": "tsc && vite build",
+        "preview": "vite preview --port 45834",
+        "app:build": "tsc && vite build --mode standalone"
+    },
+    "dependencies": {
+        "@tanstack/react-query": "^5.10.0",
+        "@tanstack/react-query-devtools": "^5.10.0",
+        "@trpc/client": "11.0.0-alpha-next-2023-11-24-13-58-38.113",
+        "@trpc/react-query": "11.0.0-alpha-next-2023-11-24-13-58-38.113",
+        "@trpc/server": "11.0.0-alpha-next-2023-11-24-13-58-38.113",
+        "api": "workspace:*",
+        "eslint-config-custom": "workspace:*",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.20.0",
+        "tailwind-config": "workspace:*",
+        "tsconfig": "workspace:*",
+        "ui": "workspace:*"
+    },
+    "devDependencies": {
+        "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+        "@radix-ui/react-dropdown-menu": "^2.0.6",
+        "@radix-ui/react-icons": "^1.3.0",
+        "@types/jest": "^29.5.10",
+        "@types/node": "^20.10.1",
+        "@types/react": "^18.2.39",
+        "@types/react-dom": "^18.2.17",
+        "@vitejs/plugin-react-swc": "^3.5.0",
+        "autoprefixer": "^10.4.16",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.0.0",
+        "esbuild": "^0.19.8",
+        "express-jwt": "^8.4.1",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.31",
+        "prettier": "^3.1.0",
+        "sass": "^1.69.5",
+        "tailwind-merge": "^2.0.0",
+        "tailwindcss": "^3.3.5",
+        "taze": "^0.13.0",
+        "typescript": "^5.3.2",
+        "vite": "^5.0.4",
+        "vite-plugin-mkcert": "^1.17.1"
+    }
 }
